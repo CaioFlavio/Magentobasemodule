@@ -1,0 +1,19 @@
+<?xml version="1.0"?>
+<config>
+    <modules>
+        <Yourcompany_Modulename>
+            <version>0.0.1</version>    <!-- Version number of your module -->
+        </Yourcompany_Modulename>
+    </modules>
+    <frontend>
+        <routers>
+            <modulename>                <!-- Lowercase module name -->
+                <use>standard</use>
+                <args>
+                    <module>Yourcompany_Modulename</module>
+                    <frontName>modulename</frontName> <!-- yoursitename.com/index.php/modulename/ will call the controller and action index -->
+                </args>
+            </modulename>
+        </routers>
+    </frontend>
+</config>
