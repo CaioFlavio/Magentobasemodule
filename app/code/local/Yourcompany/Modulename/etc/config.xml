@@ -16,4 +16,11 @@
             </modulename>
         </routers>
     </frontend>
+    <global>
+        <helpers>
+            <helpername>  <!-- Mage::getHelper('helpername') -->
+                <class>Yourcompany_Modulename_Helper</class>
+            </helpername>
+        </helpers> 
+    </global>    
 </config>
