@@ -1,16 +1,16 @@
 <?xml version="1.0"?>
 <config>
     <modules>
-        <Yourcompany_Modulename>
-            <version>0.0.1</version>    <!-- Version number of your module -->
-        </Yourcompany_Modulename>
+        <YourCompany_ModuleName>
+            <version>0.0.2</version>    <!-- Version number of your module -->
+        </YourCompany_ModuleName>
     </modules>
     <frontend>
         <routers>
             <modulename>                <!-- Lowercase module name -->
                 <use>standard</use>
                 <args>
-                    <module>Yourcompany_Modulename</module>
+                    <module>YourCompany_ModuleName</module>
                     <frontName>modulename</frontName> <!-- yoursitename.com/index.php/modulename/ will call the controller and action index -->
                 </args>
             </modulename>
@@ -19,13 +19,29 @@
     <global>
         <helpers>
             <helpername>  <!-- Mage::getHelper('helpername') -->
-                <class>Yourcompany_Modulename_Helper</class>
+                <class>YourCompany_ModuleName_Helper</class>
             </helpername>
         </helpers> 
         <blocks> 
             <yourmodule_modulename>
-                <class>Yourcompany_Modulename_Block</class>
+                <class>YourCompany_ModuleName_Block</class>
             </yourmodule_modulename>
-        </blocks>  
+        </blocks>
+        <models>
+            <yourmodule_modulename>
+                <class>YourCompany_ModuleName_Model</class>
+            </yourmodule_modulename>
+        </models>
+        <events>
+            <controller_action_postdispatch_modulename_index_index>
+                <observers>
+                    <YourCompany_ModuleName_Model_Observer>
+                        <type>singleton</type>
+                        <class>YourCompany_ModuleName_Model_Observer</class>
+                        <method>observerTest</method>
+                    </YourCompany_ModuleName_Model_Observer>
+                </observers>   
+            </controller_action_postdispatch_modulename_index_index>
+        </events>
     </global>    
 </config>

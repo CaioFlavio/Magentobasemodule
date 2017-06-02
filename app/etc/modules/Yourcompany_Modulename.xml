@@ -1,9 +1,9 @@
 <?xml version="1.0"?>
 <config>
     <modules>
-        <Yourcompany_Modulename>
+        <YourCompany_ModuleName>
         <active>true</active>
         <codePool>local</codePool>
-        </Yourcompany_Modulename>
+        </YourCompany_ModuleName>
     </modules>
 </config>
