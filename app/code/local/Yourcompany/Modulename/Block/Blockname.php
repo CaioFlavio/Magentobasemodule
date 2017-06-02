@@ -1,4 +1,4 @@
 <?php
-	class Yourcompany_Modulename_Block_Blockname extends Mage_Core_Block_Template{
+	class YourCompany_ModuleName_Block_BlockName extends Mage_Core_Block_Template{
 
 	}
